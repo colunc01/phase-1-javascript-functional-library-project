@@ -3,7 +3,8 @@ function myEach(collection, callback) {
       for (let i = 0; i < collection.length; i++) {
         callback(collection[i]);
       }
-    } else {
+    } 
+    else {
       const values = Object.values(collection);
       for (let i = 0; i < values.length; i++) {
         callback(values[i]);
@@ -18,7 +19,8 @@ function myEach(collection, callback) {
       for (let i = 0; i < collection.length; i++) {
         result.push(callback(collection[i]));
       }
-    } else {
+    } 
+    else {
       const values = Object.values(collection);
       for (let i = 0; i < values.length; i++) {
         result.push(callback(values[i]));
@@ -51,7 +53,8 @@ function myReduce(collection, callback, acc) {
           return collection[i];
         }
       }
-    } else {
+    } 
+    else {
       const values = Object.values(collection);
       for (let i = 0; i < values.length; i++) {
         if (predicate(values[i])) {
@@ -70,7 +73,8 @@ function myReduce(collection, callback, acc) {
           result.push(collection[i]);
         }
       }
-    } else {
+    } 
+    else {
       const values = Object.values(collection);
       for (let i = 0; i < values.length; i++) {
         if (predicate(values[i])) {
@@ -92,7 +96,8 @@ function myReduce(collection, callback, acc) {
   function myFirst(array, n) {
     if (n === undefined) {
       return array[0];
-    } else {
+    } 
+    else {
       return array.slice(0, n);
     }
   }
@@ -100,7 +105,8 @@ function myReduce(collection, callback, acc) {
   function myLast(array, n) {
     if (n === undefined) {
       return array[array.length - 1];
-    } else {
+    } 
+    else {
       return array.slice(-n);
     }
   }
@@ -112,9 +118,11 @@ function myReduce(collection, callback, acc) {
       const bValue = callback(b);
       if (aValue < bValue) {
         return -1;
-      } else if (aValue > bValue) {
+      } 
+      else if (aValue > bValue) {
         return 1;
-      } else {
+      } 
+      else {
         return 0;
       }
     });
